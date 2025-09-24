@@ -79,15 +79,26 @@
       padding-bottom: 4px;
     }
     .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      justify-content: center;  /* center align items */
+      gap: 15px;                /* space between skills */
+      margin-top: 20px;
     }
+
     .skill {
-      background: #e2e8f0;
-      padding: 6px 12px;
-      border-radius: 6px;
-      font-size: 14px;
+      background: #f4f4f4;
+      padding: 10px 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      font-size: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    .skill:hover {
+      transform: scale(1.1);
+      background: linear-gradient(135deg, #0f62fe, #42a5f5);
+      color: #fff;
     }
     .projects {
       display: grid;
