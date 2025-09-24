@@ -14,7 +14,7 @@
       line-height: 1.4;
     }
     header {
-      background-image: url('images.jpeg'); /* your image */
+      background-image: images.jpeg; /* your image */
       background-size: cover;       /* make it cover the entire header */
       background-position: center;  /* center the image */
       color: #fff;
