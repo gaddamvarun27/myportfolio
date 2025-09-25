@@ -57,8 +57,8 @@
       transition: all 0.3s ease;
     }
     nav a:hover, nav a.active {
-    background: #0f62fe;
-    color: #fff;
+      background: #0f62fe;
+      color: #fff;
     }
     section {
       max-width: 1000px;
