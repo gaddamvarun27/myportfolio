@@ -68,3 +68,39 @@ document.addEventListener("DOMContentLoaded", () => {
     updateButton();
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".project-card");
+
+  cards.forEach(card => {
+    card.addEventListener("click", () => {
+      // Hide all cards
+      cards.forEach(c => {
+        c.style.display = "none";
+        c.classList.remove("active");
+      });
+
+      // Show only clicked card
+      card.style.display = "block";
+      card.classList.add("active");
+
+      // Add a back button dynamically
+      let backBtn = card.querySelector(".back-btn");
+      if (!backBtn) {
+        backBtn = document.createElement("button");
+        backBtn.textContent = "⬅ Back to Projects";
+        backBtn.className = "back-btn";
+        card.appendChild(backBtn);
+
+        backBtn.addEventListener("click", (e) => {
+          e.stopPropagation(); // prevent card click
+          // Show all cards again
+          cards.forEach(c => {
+            c.style.display = "block";
+            c.classList.remove("active");
+          });
+          backBtn.remove(); // remove back button
+        });
+      }
+    });
+  });
+});
