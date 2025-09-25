@@ -57,7 +57,7 @@
       transition: all 0.3s ease;
     }
     nav a:hover, nav a.active {
-    background: var(--accent);
+    background: #0f62fe;
     color: #fff;
     }
     section {
