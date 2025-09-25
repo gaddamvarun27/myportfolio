@@ -97,21 +97,58 @@
   background: linear-gradient(135deg, #0f62fe, #42a5f5);
   color: #fff;
 }
-.projects {
+.project-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
+  justify-content: center;
 }
-.card {
-  background: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+
+.project-card {
+  background: var(--nav-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  cursor: pointer;
+  flex: 1 1 300px;
+  transition: transform 0.3s ease;
 }
-.card h3 {
-  margin-top: 0;
-  font-size: 18px;
+
+.project-card:hover {
+  transform: translateY(-5px);
 }
+
+.project-header {
+  padding: 16px;
+  background: var(--accent);
+  color: #fff;
+}
+
+.project-body {
+  padding: 16px;
+  display: none; /* hidden by default */
+  background: var(--bg);
+  color: var(--text);
+}
+
+.project-card.active .project-body {
+  display: block;
+}
+.back-btn {
+  margin-top: 12px;
+  padding: 8px 14px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.back-btn:hover {
+  background: #0043ce;
+}
+
 footer {
   text-align: center;
   padding: 20px;
