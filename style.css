@@ -142,4 +142,17 @@ a {
   transform: scale(1.1);
   background: linear-gradient(135deg, #42a5f5, #0f62fe);
 }
+#availability {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #f9b703;
+  text-align: center;
+  margin: 20px 0;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
 </style>
